@@ -261,7 +261,7 @@ strong {
 .hero .container {
   position: relative;
   overflow: hidden;
-  height: 580px;
+  height: 880px;
 }
 
 .heroText {
@@ -776,7 +776,7 @@ strong {
 -----------------------------------------*/
 @media screen and (min-width: 1600px) {
   .hero .container {
-    height: 740px;
+    height: 1440px;
   }
 }
 
