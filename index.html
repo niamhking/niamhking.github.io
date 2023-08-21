@@ -1,216 +1,303 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Website Title -->
+    <title>Niamh King</title>
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font-Awesome -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Lightbox -->
+    <link href="assets/lightbox/css/lightbox.css" rel="stylesheet">
+    <!-- Text Rotator-->
+    <link href="assets/textrotator/simpletextrotator.css" rel="stylesheet">
+    <!-- FlexSlider -->
+    <link href="assets/flexslider/flexslider.css" rel="stylesheet">
+    <!-- Theme Style -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Animations -->
+    <link href="css/animate.css" rel="stylesheet">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>SOEN357 Mini Project</title>
-
-    <!-- CSS FILES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/carousel.css" rel="stylesheet">
-
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/owl.carousel.min.css" rel="stylesheet">
-
-    <link href="css/owl.theme.default.min.css" rel="stylesheet">
-
-    <link href="css/templatemo-medic-care.css" rel="stylesheet">
-
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="assets/html5shiv/html5shiv.js"></script>
+    <script src="assets/respond/respond.min.js"></script>
+    <![endif]-->
 </head>
-
 <body id="top">
 
-    <main>
+<!-- ****************************** Preloader ************************** -->
+<div id="preloader"></div>
 
-        <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
-            <div class="container">
-                <a class="navbar-brand mx-auto d-lg-none" href="index.html">
-                    SOEN 357
-                    <strong class="d-block">Niamh King Portfolio</strong>
-                </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-
-                        <a class="navbar-brand d-none d-lg-block" href="index.html">
-                            Project Home
-                            <strong class="d-block">SOEN 357</strong>
-                        </a>
-
-                    </ul>
-                </div>
-
-            </div>
-        </nav>
-
-        <section class="hero" id="hero">
-            <div class="container">
-
-                <br /><br />
-
-                <h1>Mini Project header</h1>
-
-                <br /><br /><br />
-
-                <p>
-                    We want to design an application which is going to be supporting the physical and mental health and wellness of the elderly population. The application is going to be designed based on elderly people living at home or in a nursing home. There are many challenges that the senior population faces, such as loneliness, physical inactivity, mental health issues, etc. For these reasons, we have decided to develop Carefree, an online platform that englobes various modules.  We want to create an application which is going to be entertaining, keep them in touch with the community, as well as adapt to their lifestyle
-                </p>
-
-                <br /><br />
-
-                <p>Some of the features that we are looking to implement are the following:</p>
-
-                <p>
-                    <b>Online game platform:</b>
-                    According to X, the best way to keep your brain sharp is by training it. Online gaming is known to help improve memory, problem-solving, decision-making, etc. We want to reduce the rate of memory function loss in this population, as this is a prevalent issue. Not only is it good for the brain, but it is a great way to socialize with others. An online gaming platform is going to allow the elderly population to stay connected with their pairs, which is going to have a positive impact on their mental health and overall well-being.
-                </p>
-                <p>
-                    <b>Community page:</b>
-                    There is the issue of social isolation and loneliness in the elderly population, which could have huge repercussions in their overall mental and physical health. Having an online platform can allow them to create social connections and meet like-minded people. Additionally, it is a great medium for them to share and get information so that they could be up-to-date with the community. This is especially going to be beneficial to those who have limited mobility and are not able to go to in-person meetings. Overall, we want the older population to have a sense of belonging so that they feel less lonely.
-</p>
-                <p>
-                    <b>Fitness/Physiotherapy Page:</b>
-                    Having an online platform for physiotherapy is greatly beneficial for those who are often forgetful of doing their exercises. We are planning to implement an alert system to remind the user to do their exercises. There is also the notion of convenience, considering that it could sometimes be hard for elderly people to go to a physiotherapist in person. With an online platform, given that the exercises are going to be customized according to your profile, they could pick their exercises based on their preferences, as well as their condition. We want to make sure that the exercises that they do are enjoyable, and not just a task that they want to get over with. The exercises are going to be chosen based on their location, whether they are at home or in a fitness setting. There is going to be an option in which the user could contact a physiotherapist virtually in case they need a virtual session with them.
-                </p>
-                <p>
-                    <b>User Profile:</b>
-                    The user profile is at the core of the mobile application, considering that the various modules are tailored to them. In order to make that happen, we will need to gather some information about the user, such as their name, their age, date of birth, e-mail, as well as biometric data. With the gathered data, we are going to be customizing the platform to their wants and needs.
-                </p>
-                <p>
-                    <b>Medication tracker:</b>
-                    As mentioned earlier, forgetfulness is one of the issues associated with aging. The medication tracker is going to be sending reminders to the user to take their medication. Oftentimes, seniors have many medications to take during the day, and it is easy to get confused. To customize this module, we are going to ask the user to enter the name of the medication and at what frequency they need to take it. This is going to be preventing medication errors, as the notification that they are going to get is going to clearly indicate which medication to take, as well as the dose.
-                </p>
-                <p>
-                    <b>Consultation/Medical Professional contacts page:</b>
-                    Getting medical professional advice during these uncertain times could be next to impossible, since there aren’t enough professional in-person. Online consultations are convenient, since it saves time on transportation for individuals. This is especially advantageous for the population that has reduced mobility. It is also very convenient, since the seniors could get medical advice at the tip of their fingers. For the medical professional, it is going to make it easier for them to do a quick diagnosis, considering that they will have access to the patient’s medical information. Having a mobile application is also going to allow the user to have a clear communication with the healthcare professional.
-                </p>
-                <p>
-                    <b>General Settings:</b>
-                    There is going to be a general setting module in the mobile application, as we want to allow the user to change the font size, the spacing between the widgets, the light or dark mode, a text-to-speech mode, etc. The goal is to cater the application to their taste, as well as make it accessible.
-                </p>
-
-            </div>
-        </section>
-
-        <section class="section-padding" id="about">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <h2 class="mb-lg-3 mb-3">Page Content</h2>
-
-                        <p>info...</p>
-
-                        <p>more info.</p>
+<!-- ==========================
+HEADER SECTION
+=========================== -->
+<header id="home">
+    <!-- creative menu -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="menu-wrap">
+                <nav class="menu">
+                    <!-- Menu Links -->
+                    <div class="icon-list">
+                        <a href="index.html#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
+                        <a href="index.html#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
+                        <a href="index.html#portfolio"><i class="fa fa-fw fa-picture-o"></i><span>Portfolio</span></a>
+                        <a href="index.html#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
                     </div>
-
-
-
+                </nav>
+            </div>
+            <button class="menu-button" id="open-button"></button><!-- menu button -->
+        </div><!--/row-->
+    </div><!--/container-->
+    <!-- Header Image -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <!-- Slider Button (don't edit!)-->
+            <div class="row">
+                <div class="col-md-12 text-right navicon">
+                    <a id="nav-toggle" class="nav_slide_button" href="index.html#"><span></span></a>
                 </div>
             </div>
-        </section>
-
-        <section class="gallery">
-            <div class="container">
-                <div class="row">
-
-                    <!--
-                <div class="col-lg-6 col-6 ps-0">
-                    <img src="images/gallery/medium-shot-man-getting-vaccine.jpg" class="img-fluid galleryImage" alt="get a vaccine" title="get a vaccine for yourself">
-                </div>
-
-                <div class="col-lg-6 col-6 pe-0">
-                    <img src="images/gallery/female-doctor-with-presenting-hand-gesture.jpg" class="img-fluid galleryImage" alt="wear a mask" title="wear a mask to protect yourself">
-                </div>
-                        -->
-
+            <!-- HEADER HEADLINE -->
+            <div class="row">
+                <div class="col-md-8 col-md-offset-1 inner">
+                    <h1 class="animated fadeInDown">
+                        N<span style="color:#E04343;">I</span>amh<br/>
+                        <span>K<span style="color:#FFE800">I</span>ng</span>
+                    </h1><!-- Title -->
+                    <h3 class="animated fadeInUp delay-05s"><span class="rotate">Student, Programmer, Communicator, Developer</span></h3><!-- Text Rotator -->
                 </div>
             </div>
-        </section>
-
-
-
-        <section class="section-padding pb-0" id="reviews">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-12">
-                        <h2 class="text-center mb-lg-5 mb-4">Our Personas</h2>
-
-
-
-
-                    </div>
-
-
-                </div>
-
-        </section>
-
-        <div class="slideshow-container">
-
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="images/reviews/Bill_Waters.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="images/reviews/Erin_Mathews.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="images/reviews/Maggie_Olson.png" style="width:100%">
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<!--            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
         </div>
+    </section>
+    <!-- Header Image End -->
+</header>
+<!-- ==========================
+HEADER SECTION END
+=========================== -->
+
+
+<!-- ==========================
+        ABOUT SECTION
+        =========================== -->
+<section class="intro text-center section-padding color-bg" id="about">
+    <div class="container">
+        <!-- WELCOME TEXT -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 wp1">
+                <h1 class="arrow">A little <span>about</span> me</h1><!-- Headline -->
+                <!-- about / welcome text -->
+                <p>I am a confident, outgoing individual who has strong communication skills. I show this through my ability to work well in a team and with others. </p>
+                <p>I am a level-headed person who can work well under pressure and time constraints. I have keen interests in technology and computer systems which I further with my studies at the University of Strathclyde and both my summer internships with Rolls-Royce Defence UK.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ==========================
+        PORTFOLIO SECTION
+    =========================== -->
+<section class="swag text-center" id="portfolio">
+    <div class="container">
+        <!-- Headline -->
+        <div class="row">
+            <h1 class="arrow">
+                Recent <span>Projects</span>
+            </h1>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row row-offset-0">
+
+        <!-- PORTFOLIO ITEM 1 -->
+        <div class="col-md-3 col-sm-6">
+            <div class="overlay-effect effects clearfix">
+                <div class="img">
+                    <a href="img/portfolio/portfolio-01-large.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-01-thumbnail.jpg" alt="Portfolio Item"></a>
+                </div>
+            </div>
+        </div>
+        <!-- PORTFOLIO ITEM END -->
+
+        <!-- PORTFOLIO ITEM 2 -->
+        <div class="col-md-3 col-sm-6">
+            <div class="overlay-effect effects clearfix">
+                <div class="img">
+                    <a href="img/portfolio/portfolio-02-large.jpg" data-lightbox="roadtrip" title="Project Two - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-02-thumbnail.jpg" alt="Portfolio Item"></a>
+                </div>
+            </div>
+        </div>
+        <!-- PORTFOLIO ITEM END -->
+
+        <!-- PORTFOLIO ITEM 3 -->
+        <div class="col-md-3 col-sm-6">
+            <div class="overlay-effect effects clearfix">
+                <div class="img">
+                    <a href="img/portfolio/portfolio-03-large.jpg" data-lightbox="roadtrip" title="Project Three - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-03-thumbnail.jpg" alt="Portfolio Item"></a>
+                </div>
+            </div>
+        </div>
+        <!-- PORTFOLIO ITEM END -->
+
+        <!-- PORTFOLIO ITEM 4 -->
+        <div class="col-md-3 col-sm-6 ">
+            <div class="overlay-effect effects clearfix">
+                <div class="img">
+                    <a href="img/portfolio/portfolio-04-large.jpg" data-lightbox="roadtrip" title="Project Four - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-04-thumbnail.jpg" alt="Portfolio Item"></a>
+                </div>
+            </div>
+        </div>
+        <!-- PORTFOLIO ITEM END -->
+
+        <!-- PORTFOLIO ITEM 5 -->
+        <div class="col-md-3 col-sm-6 ">
+            <div class="overlay-effect effects clearfix">
+                <div class="img">
+                    <a href="img/portfolio/portfolio-05-large.jpg" data-lightbox="roadtrip" title="Project Five - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-05-thumbnail.jpg" alt="Portfolio Item"></a>
+                </div>
+            </div>
+        </div>
+        <!-- PORTFOLIO ITEM END -->
+
+        <!-- PORTFOLIO ITEM 6 -->
+        <div class="col-md-3 col-sm-6">
+            <div class="overlay-effect effects clearfix">
+                <div class="img">
+                    <a href="img/portfolio/portfolio-06-large.jpg" data-lightbox="roadtrip" title="Project Six - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-06-thumbnail.jpg" alt="Portfolio Item"></a>
+                </div>
+            </div>
+        </div>
+        <!-- PORTFOLIO ITEM END -->
+
+        <!-- PORTFOLIO ITEM 7 -->
+        <div class="col-md-3 col-sm-6">
+            <div class="overlay-effect effects clearfix">
+                <div class="img">
+                    <a href="img/portfolio/portfolio-07-large.jpg" data-lightbox="roadtrip" title="Project Seven - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-07-thumbnail.jpg" alt="Portfolio Item"></a>
+                </div>
+            </div>
+        </div>
+        <!-- PORTFOLIO ITEM END -->
+
+        <!-- PORTFOLIO ITEM 8 -->
+        <div class="col-md-3 col-sm-6">
+            <div class="overlay-effect effects clearfix">
+                <div class="img">
+                    <a href="img/portfolio/portfolio-08-large.jpg" data-lightbox="roadtrip" title="Project Eight - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-08-thumbnail.jpg" alt="Portfolio Item"></a>
+                </div>
+            </div>
+        </div>
+        <!-- PORTFOLIO ITEM END -->
+    </div><!--/row-->
+</div><!--/.container-->
+<!-- ==========================
+PORTFOLIO SECTION END
+=========================== -->
+
+<!-- ==========================
+        CONTACT SECTION
+        =========================== -->
+<section class="text-center section-padding contact-wrap" id="contact">
+    <!-- To Top Button -->
+    <a href="index.html#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+    <div class="container">
+        <!-- Headline -->
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="arrow">Drop <span>me</span> a line</h1>
+            </div>
+        </div>
+        <div class="row contact-details">
+            <!-- Adress Box -->
+            <div class="col-md-4">
+                <div class="dark-box box-hover">
+                    <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
+                    <p>Bath Street, Glasgow</p>
+                </div>
+            </div>
+            <!-- Phone Number Box -->
+            <div class="col-md-4">
+                <div class="dark-box box-hover">
+                    <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
+                    <p>+44 789 113 7808</p>
+                </div>
+            </div>
+            <!-- E-Mail Box -->
+            <div class="col-md-4">
+                <div class="dark-box box-hover">
+                    <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
+                    <p><a href="index.html#">Niamh_king@hotmail.co.uk</a></p>
+                </div>
+            </div>
+        </div>
+
         <br>
 
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
+    </div>
+</section>
+<!-- ==========================
+CONTACT SECTION END
+=========================== -->
 
-        </div>
 
-    </main>
 
-    <footer class="site-footer section-padding" id="contact">
-        <div class="container">
-           
+<!-- ==========================
+        FOOTER SECTION
+        =========================== -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>All Rights Reserved. &copy; 2015 ThemeWagon
             </div>
-    </footer>
+        </div>
+    </div>
+</footer>
+<!-- ==========================
+FOOTER SECTION END
+=========================== -->
 
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/scrollspy.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/carousel.js"></script>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- SmoothScroll -->
+<script type="text/javascript" src="assets/smoothscroll/smoothscroll.js"></script>
+<!-- Bootstrap -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/waypoints.min.js"></script>
+<!-- classie.js -->
+<script src="js/classie.js"></script>
+<!-- FlexSlider -->
+<script src="assets/flexslider/jquery.flexslider.js"></script>
+<!-- Modernizr -->
+<script src="js/modernizr.js"></script>
+<!-- Text Rotator -->
+<script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
+<!-- Lightbox.js -->
+<script src="assets/lightbox/js/lightbox.min.js"></script>
+<!-- Theme JavaScript Core -->
+<script src="js/main.js"></script>
+<script src="js/script.js"></script>
+
+<!-- TEXT ROTATOR SETTINGS -->
+<script type="text/javascript">
+    $(".rotate").textrotator({
+        animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+        separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+        speed: 2000 // How many milliseconds until the next word show.
+    });
+</script>
 
 </body>
 </html>
