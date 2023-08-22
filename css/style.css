@@ -33,16 +33,23 @@ a {
 	border-bottom: 1px dashed;
 	outline:none!important;
 }
+
+a.linked{
+	color:#8c9398;
+	border-bottom: 1px solid;
+}
+
 a:hover,a:focus,a:active {
 	color:#0D0D0D;
 	text-decoration:none;
 	outline:none!important;
 }
 p {
-	color:#8c9398;
+	color:#0D0D0D;
 	word-spacing:1px;
-	line-height:25px;
-	font-size:14px;
+	line-height:30px;
+	font-size:18px;
+	text-align: justify;
 }
 h2 {
 	font-size:15px;
@@ -563,6 +570,25 @@ h1.arrow {
 h1.arrow span {
     color: #E04343;
 }
+
+p.arrow {
+	font-size: 16px;
+	text-transform:uppercase;
+	color:#E04343;
+	letter-spacing: 4px;
+	padding-bottom:15px;
+	padding-top:30px;
+	font-weight: bold;
+}
+
+p.box{
+	color:#8c9398;
+	word-spacing:1px;
+	line-height:25px;
+	font-size:14px;
+	text-align: center;
+}
+
 /* ==========================================================================About========================================================================== */
 .about-image {
 	height:400px;
