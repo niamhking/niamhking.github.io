@@ -51,6 +51,10 @@ p {
 	font-size:18px;
 	text-align: justify;
 }
+
+p.scrollto--arrow{
+	color: #0D0D0D;
+}
 h2 {
 	font-size:15px;
 	color:#353535!important;
@@ -460,6 +464,7 @@ table {
 }
 /* ==========================================================================Hero========================================================================== */
 .hero {
+	background: url('../img/ID_Photo-removebg.png') right bottom no-repeat;
 	background-size: contain;
 	padding:110px 0 100px 0;
 	height:auto;
@@ -544,12 +549,14 @@ table {
 .scrollto {
 	padding: 150px 0px 0px 0px;
 	display:block;
-	color:#FFF;
+	color: #2d2c2c;
 	text-decoration:none;
 	width:200px;
 	margin:0 auto;
 	border-bottom: none;
 }
+
+
 .scrollto--arrow {
 	padding:10px;
 }
