@@ -716,6 +716,16 @@ i.respons {
 .responsive-services {
 	position: relative;
 }
+
+.imgJourni{
+	position: center;
+	max-width: 50%;
+	max-height: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* ==========================================================================Portfolio========================================================================== */
 .swag {
 	padding:75px 0;
