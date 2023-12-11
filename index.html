@@ -3,366 +3,544 @@
         =========================== -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Website Title -->
     <title>Niamh King</title>
     <!-- Bootstrap -->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Font-Awesome -->
-    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link
+      href="assets/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <!-- Lightbox -->
-    <link href="assets/lightbox/css/lightbox.css" rel="stylesheet">
+    <link href="assets/lightbox/css/lightbox.css" rel="stylesheet" />
     <!-- Text Rotator-->
-    <link href="assets/textrotator/simpletextrotator.css" rel="stylesheet">
+    <link href="assets/textrotator/simpletextrotator.css" rel="stylesheet" />
     <!-- FlexSlider -->
-    <link href="assets/flexslider/flexslider.css" rel="stylesheet">
+    <link href="assets/flexslider/flexslider.css" rel="stylesheet" />
     <!-- Theme Style -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
     <!-- Animations -->
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet" />
 
     <style>
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="assets/html5shiv/html5shiv.js"></script>
-    <script src="assets/respond/respond.min.js"></script>
+      <script src="assets/html5shiv/html5shiv.js"></script>
+      <script src="assets/respond/respond.min.js"></script>
     <![endif]-->
-</head>
-<body id="top">
+  </head>
+  <body id="top">
+    <!-- ****************************** Preloader ************************** -->
+    <div id="preloader"></div>
 
-<!-- ****************************** Preloader ************************** -->
-<div id="preloader"></div>
-
-
-<!-- ==========================
+    <!-- ==========================
 HEADER SECTION
 =========================== -->
-<header id="home">
-    <!-- creative menu -->
-    <div class="container-fluid">
+    <header id="home">
+      <!-- creative menu -->
+      <div class="container-fluid">
         <div class="row">
-            <div class="menu-wrap">
-                <nav class="menu">
-                    <!-- Menu Links -->
-                    <div class="icon-list">
-                        <a href="index.html#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
-                        <a href="index.html#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
-                        <a href="index.html#portfolio"><i class="fa fa-fw fa-picture-o"></i><span>Portfolio</span></a>
-                        <a href="index.html#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
-                    </div>
-                </nav>
-            </div>
-            <button class="menu-button" id="open-button"></button><!-- menu button -->
-        </div><!--/row-->
-    </div><!--/container-->
-    <!-- Header Image -->
-    <section class="hero" id="hero">
-        <div class="container">
-            <!-- Slider Button (don't edit!)-->
-            <div class="row">
-                <div class="col-md-12 text-right navicon">
-                    <a id="nav-toggle" class="nav_slide_button" href="index.html#"><span></span></a>
-                </div>
-            </div>
-            <!-- HEADER HEADLINE -->
-            <div class="row">
-                <div class="col-md-8 col-md-offset-1 inner">
-                    <h1 class="animated fadeInDown">
-                        N<span style="color:#E04343;">I</span>amh<br/>
-                        <span>K<span style="color:#FFE800">I</span>ng</span>
-                    </h1><!-- Title -->
-                    <h3 class="animated fadeInUp delay-05s"><span class="rotate">Student, Professional, Software Developer</span></h3><!-- Text Rotator -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <a href="index.html#about" class="scrollto fadeInUp delay-5s ">
-                        <p></p>
-                        <p class="scrollto--arrow"><img src="img/scroll-down.png" alt="scroll down arrow"></p>
-                    </a>
-                </div>
-            </div>
+          <div class="menu-wrap">
+            <nav class="menu">
+              <!-- Menu Links -->
+              <div class="icon-list">
+                <a href="index.html#home"
+                  ><i class="fa fa-fw fa-home"></i><span>Home</span></a
+                >
+                <a href="index.html#about"
+                  ><i class="fa fa-fw fa-quote-left"></i><span>About</span></a
+                >
+                <a href="index.html#portfolio"
+                  ><i class="fa fa-fw fa-picture-o"></i
+                  ><span>Portfolio</span></a
+                >
+                <a href="index.html#contact"
+                  ><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a
+                >
+              </div>
+            </nav>
+          </div>
+          <button class="menu-button" id="open-button"></button
+          ><!-- menu button -->
         </div>
-    </section>
-    <!-- Header Image End -->
-</header>
-<!-- ==========================
+        <!--/row-->
+      </div>
+      <!--/container-->
+      <!-- Header Image -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <!-- Slider Button (don't edit!)-->
+          <div class="row">
+            <div class="col-md-12 text-right navicon">
+              <a id="nav-toggle" class="nav_slide_button" href="index.html#"
+                ><span></span
+              ></a>
+            </div>
+          </div>
+          <!-- HEADER HEADLINE -->
+          <div class="row">
+            <div class="col-md-8 col-md-offset-1 inner">
+              <h1 class="animated fadeInDown">
+                N<span style="color: #e04343">I</span>amh<br />
+                <span>K<span style="color: #ffe800">I</span>ng</span>
+              </h1>
+              <!-- Title -->
+              <h3 class="animated fadeInUp delay-05s">
+                <span class="rotate"
+                  >Student, Professional, Software Developer</span
+                >
+              </h3>
+              <!-- Text Rotator -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+              <a href="index.html#about" class="scrollto fadeInUp delay-5s">
+                <p></p>
+                <p class="scrollto--arrow">
+                  <img src="img/scroll-down.png" alt="scroll down arrow" />
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Header Image End -->
+    </header>
+    <!-- ==========================
 HEADER SECTION END
 =========================== -->
 
-
-<!-- ==========================
+    <!-- ==========================
         ABOUT SECTION
         =========================== -->
-<section class="intro text-center section-padding color-bg" id="about">
-    <div class="container">
+    <section class="intro text-center section-padding color-bg" id="about">
+      <div class="container">
         <!-- WELCOME TEXT -->
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 wp1">
-                <h1 class="arrow">A little <span>about</span> me</h1><!-- Headline -->
-                <!-- about / welcome text -->
-                <p>I will start my final year of my MEng Computer and Electronic Systems studies at the University of Strathclyde in September 2023, with an expected graduation of June 2024; having just returned from spending a year in education at the University of Concordia in Montreal.</p>
-                <p>Over the last few years, my growth in management skills have allowed me to coordinate and collaborate within a team in order to make sure everyone is heard. Being a very determined person, I am keen to take on any role within a team and do my part. My motivation and ambition make me a hardworking academic; A reflection of this is when I was added to the Dean’s list of students who have achieved a meritorious standard throughout all my years at university.</p>
-                <p>Opportunities that present challenges and room for error are the ones that draw me in the most, as there is much to be learnt. I aim to be hands-on and as interactive as possible, showing clients I am an effective communicator who does not shy away from solving complex problems. Ultimately, I'm looking for a role that allows me to make a positive impact whilst continuously exploring and developing my abilities. </p>
-            </div>
+          <div class="col-md-8 col-md-offset-2 wp1">
+            <h1 class="arrow">A little <span>about</span> me</h1>
+            <!-- Headline -->
+            <!-- about / welcome text -->
+            <p>
+              I will start my final year of my MEng Computer and Electronic
+              Systems studies at the University of Strathclyde in September
+              2023, with an expected graduation of June 2024; having just
+              returned from spending a year in education at the University of
+              Concordia in Montreal.
+            </p>
+            <p>
+              Over the last few years, my growth in management skills have
+              allowed me to coordinate and collaborate within a team in order to
+              make sure everyone is heard. Being a very determined person, I am
+              keen to take on any role within a team and do my part. My
+              motivation and ambition make me a hardworking academic; A
+              reflection of this is when I was added to the Dean’s list of
+              students who have achieved a meritorious standard throughout all
+              my years at university.
+            </p>
+            <p>
+              Opportunities that present challenges and room for error are the
+              ones that draw me in the most, as there is much to be learnt. I
+              aim to be hands-on and as interactive as possible, showing clients
+              I am an effective communicator who does not shy away from solving
+              complex problems. Ultimately, I'm looking for a role that allows
+              me to make a positive impact whilst continuously exploring and
+              developing my abilities.
+            </p>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-<!-- ==========================
+    <!-- ==========================
         PORTFOLIO SECTION
     =========================== -->
-<section class="swag text-center" id="portfolio">
-    <div class="container">
+    <section class="swag text-center" id="portfolio">
+      <div class="container">
         <!-- Headline -->
         <div class="row">
-            <h1 class="arrow">
-                Recent <span>Projects</span>
-            </h1>
+          <h1 class="arrow">Recent <span>Projects</span></h1>
         </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row row-offset-0">
+        <!--        &lt;!&ndash; PORTFOLIO ITEM 1 &ndash;&gt;-->
+        <!--        <div class="col-md-3 col-sm-6">-->
+        <!--            <div class="overlay-effect effects clearfix">-->
+        <!--                <div class="img">-->
+        <!--                    <a href="img/portfolio/portfolio-01-large.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-01-thumbnail.jpg" alt="Portfolio Item"></a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
+
+        <!--        &lt;!&ndash; PORTFOLIO ITEM 2 &ndash;&gt;-->
+        <!--        <div class="col-md-3 col-sm-6">-->
+        <!--            <div class="overlay-effect effects clearfix">-->
+        <!--                <div class="img">-->
+        <!--                    <a href="img/portfolio/portfolio-02-large.jpg" data-lightbox="roadtrip" title="Project Two - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-02-thumbnail.jpg" alt="Portfolio Item"></a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
+
+        <!--        &lt;!&ndash; PORTFOLIO ITEM 3 &ndash;&gt;-->
+        <!--        <div class="col-md-3 col-sm-6">-->
+        <!--            <div class="overlay-effect effects clearfix">-->
+        <!--                <div class="img">-->
+        <!--                    <a href="img/portfolio/portfolio-03-large.jpg" data-lightbox="roadtrip" title="Project Three - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-03-thumbnail.jpg" alt="Portfolio Item"></a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
+
+        <!--        &lt;!&ndash; PORTFOLIO ITEM 4 &ndash;&gt;-->
+        <!--        <div class="col-md-3 col-sm-6 ">-->
+        <!--            <div class="overlay-effect effects clearfix">-->
+        <!--                <div class="img">-->
+        <!--                    <a href="img/portfolio/portfolio-04-large.jpg" data-lightbox="roadtrip" title="Project Four - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-04-thumbnail.jpg" alt="Portfolio Item"></a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
+
+        <!--        &lt;!&ndash; PORTFOLIO ITEM 5 &ndash;&gt;-->
+        <!--        <div class="col-md-3 col-sm-6 ">-->
+        <!--            <div class="overlay-effect effects clearfix">-->
+        <!--                <div class="img">-->
+        <!--                    <a href="img/portfolio/portfolio-05-large.jpg" data-lightbox="roadtrip" title="Project Five - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-05-thumbnail.jpg" alt="Portfolio Item"></a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
+
+        <!--        &lt;!&ndash; PORTFOLIO ITEM 6 &ndash;&gt;-->
+        <!--        <div class="col-md-3 col-sm-6">-->
+        <!--            <div class="overlay-effect effects clearfix">-->
+        <!--                <div class="img">-->
+        <!--                    <a href="img/portfolio/portfolio-06-large.jpg" data-lightbox="roadtrip" title="Project Six - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-06-thumbnail.jpg" alt="Portfolio Item"></a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
+
+        <!--        &lt;!&ndash; PORTFOLIO ITEM 7 &ndash;&gt;-->
+        <!--        <div class="col-md-3 col-sm-6">-->
+        <!--            <div class="overlay-effect effects clearfix">-->
+        <!--                <div class="img">-->
+        <!--                    <a href="img/portfolio/portfolio-07-large.jpg" data-lightbox="roadtrip" title="Project Seven - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-07-thumbnail.jpg" alt="Portfolio Item"></a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
+
+        <!--        &lt;!&ndash; PORTFOLIO ITEM 8 &ndash;&gt;-->
+        <!--        <div class="col-md-3 col-sm-6">-->
+        <!--            <div class="overlay-effect effects clearfix">-->
+        <!--                <div class="img">-->
+        <!--                    <a href="img/portfolio/portfolio-08-large.jpg" data-lightbox="roadtrip" title="Project Eight - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-08-thumbnail.jpg" alt="Portfolio Item"></a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
+      </div>
+      <!--/row-->
+
+      <p class="arrow">Satellite Operations System</p>
+      <p>
+        I participated in the LeanSpace Hackathon at the annual Space Tech Expo
+        held in Bremen (2023). Throughout this four-day event, I assumed the
+        role of a UI/UX designer and front-end developer. My responsibilities
+        included designing application pages and building and implementing them
+        using React.
+      </p>
+      <p>
+        The primary goal of this application was to receive coordinate requests
+        from clients and then search for available satellites passing over the
+        target location within the next three hours. Additionally, the system
+        checked for the availability of a ground station on the satellite's
+        orbital path before reaching the target location to facilitate the
+        uplink of the telecommand sequence.
+      </p>
+      <p>
+        I showcased this application to attendees of the Space Tech Expo,
+        gathering valuable feedback from industry professionals. Subsequently,
+        we implemented identified features to enhance the overall functionality.
+      </p>
+      <br />
+      <p>
+        <img src="img/home.png" alt="app sequence" class="imgGym" />
+        <figcaption class="imgJourni">
+          Satellite Application Landing Screen
+        </figcaption>
+      </p>
+      <br />
+      <p class="arrow">Gym Tracker</p>
+      <p>
+        Whilst on my year abroad in Canada, I led a collaborative team in
+        developing a pioneering mobile application and hardware integration for
+        tracking fitness progress in the gym. This multifaceted project involved
+        processing real-time data from sensors, mastering Agile methodologies
+        like Scrum, conducting stakeholder interviews, and translating feedback
+        into a user-centered product. This effort culminated in winning the
+        prestigious "Best Capstone Project Award" of 2022, underscoring not only
+        technical accomplishments but also personal growth in teamwork,
+        innovation, and problem-solving.
+      </p>
+      <br />
+      <p>
+        <img src="img/app.png" alt="app sequence" class="imgGym" />
+        <figcaption class="imgJourni">Gym Tracker Application Flow</figcaption>
+      </p>
+      <br />
+      <p class="arrow">C++ "Risk" Game</p>
+      <p>
+        The developed program built had to be compatible with the rules and map
+        files and the command-line play of the “Warzone” version of Risk, an
+        example of such rules can be found at:
+        <a href="https://www.warzone.com/">this website</a>. A Warzone game
+        setup consists of a connected graph map representing a world map, where
+        each node is a territory and each edge represents adjacency between
+        territories. Two or more players can play by placing armies on
+        territories they own, from which they can attack adjacent territories to
+        conquer them. The objective of the game is to conquer all territories on
+        the map.
+      </p>
+      <p class="arrow">React Website "Journi" for Travellers</p>
+      <p>
+        Journi is a vacation planning tool built using React that allows users
+        to access, examine, and add to their trip all the details relating to
+        activities they may wish to do there. We wanted to draw attention to the
+        crucial details that participants needed to keep in mind for each
+        activity, such as price, duration, location, specific requirements, etc.
+        This would seek to address the significant stress, time management, and
+        financial issues consumers have when making travel plans.
+      </p>
+      <br />
+      <p>
+        <img src="img/journi1.png" alt="journi home page" class="imgJourni" />
+        <figcaption class="imgJourni">Journi Trip Page</figcaption>
+      </p>
+      <br />
+      <p class="arrow">JSP Student Enrollment Site</p>
+      <p>
+        Having set up an apache web server, a combination of tools such as PHP,
+        JSP and SQL were used alongside different design patterns to implement a
+        web application: The utilization of Data Source Architectural Patterns
+        facilitated the realization of a comprehensive university student
+        enrollment system, replete with administrative controls. This project
+        showcased the prowess of thoughtful technological selection and
+        strategic design pattern implementation in delivering a seamless and
+        user-friendly web application tailored to the specific needs of managing
+        student enrollments and administrative tasks within a university setting
+        such as class enrollment, enrollment requirements, admin access to
+        student records, class changes and so on.
+      </p>
+      <p class="arrow">Teaching Binary Game</p>
+      <p>
+        An interactive modular game system was developed to teach Boolean logic,
+        featuring various switchable modules for different game scenarios,
+        including a logic gate board and a 3-bit adder board. This system,
+        complemented by a mobile app for user responses, enables interaction
+        with the microcontroller. The initial design was prototyped, tested, and
+        then transferred to a Vero-board with soldered components. The app,
+        linked via Bluetooth, accommodates different modules and future
+        extensions. The creation of PCB schematics and routing, executed based
+        on successful circuit tests, led to the fabrication of PCBs by in-house
+        technicians. Following component soldering, the comprehensive system
+        underwent extensive successful testing.
+      </p>
+      <br />
+      <p>
+        <img src="img/binaryGame.png" alt="binary game set" class="imgJourni" />
+        <figcaption class="imgJourni">Binary Game Hardware</figcaption>
+      </p>
+      <br />
+      <p class="arrow">Boston Metro System GUI</p>
+      <p>
+        I developed a program that utilized a multi-graph Abstract Data Type
+        (ADT) to model the Boston Metro System, offering passengers directions
+        between stations. The program included a graphical user interface (GUI)
+        and followed a Model-View-Controller (MVC) architecture for
+        organization. This project highlighted my ability to implement complex
+        data structures, design functional user interfaces, and adhere to
+        established software architectures for practical applications.
+      </p>
+      <br />
+      <p>
+        <img
+          src="img/bostonMetro.png"
+          alt="boston metro system"
+          class="imgJourni"
+        />
+        <figcaption class="imgJourni">Boston Metro Route System</figcaption>
+      </p>
+      <br />
     </div>
-</section>
+    <!--/.container-->
 
-<div class="container">
-    <div class="row row-offset-0">
-
-<!--        &lt;!&ndash; PORTFOLIO ITEM 1 &ndash;&gt;-->
-<!--        <div class="col-md-3 col-sm-6">-->
-<!--            <div class="overlay-effect effects clearfix">-->
-<!--                <div class="img">-->
-<!--                    <a href="img/portfolio/portfolio-01-large.jpg" data-lightbox="roadtrip" title="Project One - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-01-thumbnail.jpg" alt="Portfolio Item"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
-
-<!--        &lt;!&ndash; PORTFOLIO ITEM 2 &ndash;&gt;-->
-<!--        <div class="col-md-3 col-sm-6">-->
-<!--            <div class="overlay-effect effects clearfix">-->
-<!--                <div class="img">-->
-<!--                    <a href="img/portfolio/portfolio-02-large.jpg" data-lightbox="roadtrip" title="Project Two - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-02-thumbnail.jpg" alt="Portfolio Item"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
-
-<!--        &lt;!&ndash; PORTFOLIO ITEM 3 &ndash;&gt;-->
-<!--        <div class="col-md-3 col-sm-6">-->
-<!--            <div class="overlay-effect effects clearfix">-->
-<!--                <div class="img">-->
-<!--                    <a href="img/portfolio/portfolio-03-large.jpg" data-lightbox="roadtrip" title="Project Three - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-03-thumbnail.jpg" alt="Portfolio Item"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
-
-<!--        &lt;!&ndash; PORTFOLIO ITEM 4 &ndash;&gt;-->
-<!--        <div class="col-md-3 col-sm-6 ">-->
-<!--            <div class="overlay-effect effects clearfix">-->
-<!--                <div class="img">-->
-<!--                    <a href="img/portfolio/portfolio-04-large.jpg" data-lightbox="roadtrip" title="Project Four - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-04-thumbnail.jpg" alt="Portfolio Item"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
-
-<!--        &lt;!&ndash; PORTFOLIO ITEM 5 &ndash;&gt;-->
-<!--        <div class="col-md-3 col-sm-6 ">-->
-<!--            <div class="overlay-effect effects clearfix">-->
-<!--                <div class="img">-->
-<!--                    <a href="img/portfolio/portfolio-05-large.jpg" data-lightbox="roadtrip" title="Project Five - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-05-thumbnail.jpg" alt="Portfolio Item"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
-
-<!--        &lt;!&ndash; PORTFOLIO ITEM 6 &ndash;&gt;-->
-<!--        <div class="col-md-3 col-sm-6">-->
-<!--            <div class="overlay-effect effects clearfix">-->
-<!--                <div class="img">-->
-<!--                    <a href="img/portfolio/portfolio-06-large.jpg" data-lightbox="roadtrip" title="Project Six - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-06-thumbnail.jpg" alt="Portfolio Item"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
-
-<!--        &lt;!&ndash; PORTFOLIO ITEM 7 &ndash;&gt;-->
-<!--        <div class="col-md-3 col-sm-6">-->
-<!--            <div class="overlay-effect effects clearfix">-->
-<!--                <div class="img">-->
-<!--                    <a href="img/portfolio/portfolio-07-large.jpg" data-lightbox="roadtrip" title="Project Seven - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-07-thumbnail.jpg" alt="Portfolio Item"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
-
-<!--        &lt;!&ndash; PORTFOLIO ITEM 8 &ndash;&gt;-->
-<!--        <div class="col-md-3 col-sm-6">-->
-<!--            <div class="overlay-effect effects clearfix">-->
-<!--                <div class="img">-->
-<!--                    <a href="img/portfolio/portfolio-08-large.jpg" data-lightbox="roadtrip" title="Project Eight - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-08-thumbnail.jpg" alt="Portfolio Item"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; PORTFOLIO ITEM END &ndash;&gt;-->
-
-    </div><!--/row-->
-
-    <p class="arrow">
-        Gym Tracker
-    </p>
-    <p>Whilst on my year abroad in Canada, I led a collaborative team in developing a pioneering mobile application and hardware integration for tracking fitness progress in the gym. This multifaceted project involved processing real-time data from sensors, mastering Agile methodologies like Scrum, conducting stakeholder interviews, and translating feedback into a user-centered product. This effort culminated in winning the prestigious "Best Capstone Project Award" of 2022, underscoring not only technical accomplishments but also personal growth in teamwork, innovation, and problem-solving.</p>
-    <br>
-    <p><img src="img/app.png" alt="app sequence" class="imgGym"><figcaption class="imgJourni">Gym Tracker Application Flow</figcaption></p>
-    <br>
-    <p class="arrow">
-        C++ "Risk" Game
-    </p>
-    <p>The developed program built had to be compatible with the rules and map files and the command-line play of the “Warzone” version of Risk, an example of such rules can be found at: <a href="https://www.warzone.com/">this website</a>. A Warzone game setup consists of a connected graph map representing a world map, where each node is a territory and each edge represents adjacency between territories. Two or more players can play by placing armies on territories they own, from which they can attack adjacent territories to conquer them. The objective of the game is to conquer all territories on the map.</p>
-    <p class="arrow">
-        React Website "Journi" for Travellers
-    </p>
-    <p>Journi is a vacation planning tool built using React that allows users to access, examine, and add to their trip all the details relating to activities they may wish to do there. We wanted to draw attention to the crucial details that participants needed to keep in mind for each activity, such as price, duration, location, specific requirements, etc. This would seek to address the significant stress, time management, and financial issues consumers have when making travel plans.</p>
-    <br>
-    <p><img src="img/journi1.png" alt="journi home page" class="imgJourni"><figcaption class="imgJourni">Journi Trip Page</figcaption></p>
-    <br>
-    <p class="arrow">
-        JSP Student Enrollment Site
-    </p>
-    <p>Having set up an apache web server, a combination of tools such as PHP, JSP and SQL were used alongside different design patterns to implement a web application: The utilization of Data Source Architectural Patterns facilitated the realization of a comprehensive university student enrollment system, replete with administrative controls. This project showcased the prowess of thoughtful technological selection and strategic design pattern implementation in delivering a seamless and user-friendly web application tailored to the specific needs of managing student enrollments and administrative tasks within a university setting such as class enrollment, enrollment requirements, admin access to student records, class changes and so on.</p>
-    <p class="arrow">
-        Teaching Binary Game
-    </p>
-    <p>An interactive modular game system was developed to teach Boolean logic, featuring various switchable modules for different game scenarios, including a logic gate board and a 3-bit adder board. This system, complemented by a mobile app for user responses, enables interaction with the microcontroller. The initial design was prototyped, tested, and then transferred to a Vero-board with soldered components. The app, linked via Bluetooth, accommodates different modules and future extensions. The creation of PCB schematics and routing, executed based on successful circuit tests, led to the fabrication of PCBs by in-house technicians. Following component soldering, the comprehensive system underwent extensive successful testing.</p>
-    <br>
-    <p><img src="img/binaryGame.png" alt="binary game set" class="imgJourni"><figcaption class="imgJourni">Binary Game Hardware</figcaption></p>
-    <br>
-    <p class="arrow">
-        Boston Metro System GUI
-    </p>
-    <p>I developed a program that utilized a multi-graph Abstract Data Type (ADT) to model the Boston Metro System, offering passengers directions between stations. The program included a graphical user interface (GUI) and followed a Model-View-Controller (MVC) architecture for organization. This project highlighted my ability to implement complex data structures, design functional user interfaces, and adhere to established software architectures for practical applications.</p>
-    <br>
-    <p><img src="img/bostonMetro.png" alt="boston metro system" class="imgJourni"><figcaption class="imgJourni">Boston Metro Route System</figcaption></p>
-    <br>
-
-</div><!--/.container-->
-
-<div class="container swag text-center">
-    <!-- Headline -->
-    <div class="row">
-        <h1 class="arrow">
-            Rolls-Royce <span>Internships</span>
-        </h1>
+    <div class="container swag text-center">
+      <!-- Headline -->
+      <div class="row">
+        <h1 class="arrow">Rolls-Royce <span>Internships</span></h1>
+      </div>
     </div>
-</div>
 
-<div class="container ">
-    <div class="row row-offset-0">
-        <p>In my role, I took on the task of developing a user-friendly graphical user interface (GUI) tailored for encoding and decoding algorithms, which formed a pivotal component for the integration of a cGAN neural network into a Human-Machine Interface (HMI) prototype. My rapid acquisition of GUI development skills using Python enabled a seamless integration into the HMI project, where I operated within an agile development framework as part of an iterative sprint team. This involved recurring reviews of tasks from the product backlog, fostering collaborative task prioritization every three weeks.</p>
-        <p>Implementing DevOps practices and harnessing Git in an industry context, I championed robust quality control throughout the project's lifecycle. Conducting usability testing on the GUI was integral to my role, necessitating close collaboration with in-house engineers and stakeholders for feedback collection, bug identification, and enhancement suggestions.</p>
-        <p>My contributions extended beyond the GUI's construction. I expanded the Human Machine Interface application's functionality, incorporating new features seamlessly into the source code. Additionally, I embarked on comprehensive training and experimentation with cGAN networks, leveraging team datasets to create new Design of Experiments (DoE) and meticulously documenting all outcomes. In this pursuit, I deepened my knowledge of image processing techniques and gained insights into the capabilities and limitations of cGAN setup tools.</p>
-        <p>A notable aspect of my journey was fostering collaboration among team members and stakeholders across the organization, facilitating effective communication channels and propelling progress towards shared objectives. Meticulous documentation was a constant priority, resulting in the creation of a comprehensive user guide for the interface and offering valuable recommendations for future improvements.</p>
-        <p>This experience offered me the privilege of engaging with various Rolls Royce employees, affording me invaluable insights into diverse company roles. The culmination of my contributions was underscored by Rolls Royce extending a full-time graduate job offer upon my degree's completion, serving as a testament to my impact within the organization.</p>
-    </div><!--/row-->
-</div><!--/.container-->
+    <div class="container">
+      <div class="row row-offset-0">
+        <p>
+          In my role, I took on the task of developing a user-friendly graphical
+          user interface (GUI) tailored for encoding and decoding algorithms,
+          which formed a pivotal component for the integration of a cGAN neural
+          network into a Human-Machine Interface (HMI) prototype. My rapid
+          acquisition of GUI development skills using Python enabled a seamless
+          integration into the HMI project, where I operated within an agile
+          development framework as part of an iterative sprint team. This
+          involved recurring reviews of tasks from the product backlog,
+          fostering collaborative task prioritization every three weeks.
+        </p>
+        <p>
+          Implementing DevOps practices and harnessing Git in an industry
+          context, I championed robust quality control throughout the project's
+          lifecycle. Conducting usability testing on the GUI was integral to my
+          role, necessitating close collaboration with in-house engineers and
+          stakeholders for feedback collection, bug identification, and
+          enhancement suggestions.
+        </p>
+        <p>
+          My contributions extended beyond the GUI's construction. I expanded
+          the Human Machine Interface application's functionality, incorporating
+          new features seamlessly into the source code. Additionally, I embarked
+          on comprehensive training and experimentation with cGAN networks,
+          leveraging team datasets to create new Design of Experiments (DoE) and
+          meticulously documenting all outcomes. In this pursuit, I deepened my
+          knowledge of image processing techniques and gained insights into the
+          capabilities and limitations of cGAN setup tools.
+        </p>
+        <p>
+          A notable aspect of my journey was fostering collaboration among team
+          members and stakeholders across the organization, facilitating
+          effective communication channels and propelling progress towards
+          shared objectives. Meticulous documentation was a constant priority,
+          resulting in the creation of a comprehensive user guide for the
+          interface and offering valuable recommendations for future
+          improvements.
+        </p>
+        <p>
+          This experience offered me the privilege of engaging with various
+          Rolls Royce employees, affording me invaluable insights into diverse
+          company roles. The culmination of my contributions was underscored by
+          Rolls Royce extending a full-time graduate job offer upon my degree's
+          completion, serving as a testament to my impact within the
+          organization.
+        </p>
+      </div>
+      <!--/row-->
+    </div>
+    <!--/.container-->
 
-
-<!-- ==========================
+    <!-- ==========================
 PORTFOLIO SECTION END
 =========================== -->
 
-<!-- ==========================
+    <!-- ==========================
         CONTACT SECTION
         =========================== -->
-<section class="text-center section-padding contact-wrap" id="contact">
-    <div class="container">
+    <section class="text-center section-padding contact-wrap" id="contact">
+      <div class="container">
         <!-- Headline -->
         <div class="row">
-            <div class="col-md-12">
-                <h1 class="arrow">Contact <span>me</span></h1>
-            </div>
+          <div class="col-md-12">
+            <h1 class="arrow">Contact <span>me</span></h1>
+          </div>
         </div>
         <div class="row contact-details">
-            <!-- Adress Box -->
-            <div class="col-md-4">
-                <div class="dark-box box-hover">
-                    <h2><i class="fa fa-linkedin"></i><span>LinkedIn</span></h2>
-                    <p class="box"><a class="linked" href="https://www.linkedin.com/in/niamh-king-453b8a6a/"><span>Niamh King</span></a></p>
-                </div>
+          <!-- Adress Box -->
+          <div class="col-md-4">
+            <div class="dark-box box-hover">
+              <h2><i class="fa fa-linkedin"></i><span>LinkedIn</span></h2>
+              <p class="box">
+                <a
+                  class="linked"
+                  href="https://www.linkedin.com/in/niamh-king-453b8a6a/"
+                  ><span>Niamh King</span></a
+                >
+              </p>
             </div>
-            <!-- Phone Number Box -->
-            <div class="col-md-4">
-                <div class="dark-box box-hover">
-                    <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
-                    <p class="box">+44 789 113 7808</p>
-                </div>
+          </div>
+          <!-- Phone Number Box -->
+          <div class="col-md-4">
+            <div class="dark-box box-hover">
+              <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
+              <p class="box">+44 789 113 7808</p>
             </div>
-            <!-- E-Mail Box -->
-            <div class="col-md-4">
-                <div class="dark-box box-hover">
-                    <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
-                    <p class="box">Niamh_king@hotmail.co.uk</p>
-                </div>
+          </div>
+          <!-- E-Mail Box -->
+          <div class="col-md-4">
+            <div class="dark-box box-hover">
+              <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
+              <p class="box">Niamh_king@hotmail.co.uk</p>
             </div>
+          </div>
         </div>
 
-        <br>
-
-    </div>
-</section>
-<!-- ==========================
+        <br />
+      </div>
+    </section>
+    <!-- ==========================
 CONTACT SECTION END
 =========================== -->
 
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- SmoothScroll -->
+    <script
+      type="text/javascript"
+      src="assets/smoothscroll/smoothscroll.js"
+    ></script>
+    <!-- Bootstrap -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/waypoints.min.js"></script>
+    <!-- classie.js -->
+    <script src="js/classie.js"></script>
+    <!-- FlexSlider -->
+    <script src="assets/flexslider/jquery.flexslider.js"></script>
+    <!-- Modernizr -->
+    <script src="js/modernizr.js"></script>
+    <!-- Text Rotator -->
+    <script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
+    <!-- Lightbox.js -->
+    <script src="assets/lightbox/js/lightbox.min.js"></script>
+    <!-- Theme JavaScript Core -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 
-
-
-
-
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!-- SmoothScroll -->
-<script type="text/javascript" src="assets/smoothscroll/smoothscroll.js"></script>
-<!-- Bootstrap -->
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="js/waypoints.min.js"></script>
-<!-- classie.js -->
-<script src="js/classie.js"></script>
-<!-- FlexSlider -->
-<script src="assets/flexslider/jquery.flexslider.js"></script>
-<!-- Modernizr -->
-<script src="js/modernizr.js"></script>
-<!-- Text Rotator -->
-<script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
-<!-- Lightbox.js -->
-<script src="assets/lightbox/js/lightbox.min.js"></script>
-<!-- Theme JavaScript Core -->
-<script src="js/main.js"></script>
-<script src="js/script.js"></script>
-
-<!-- TEXT ROTATOR SETTINGS -->
-<script type="text/javascript">
-    $(".rotate").textrotator({
+    <!-- TEXT ROTATOR SETTINGS -->
+    <script type="text/javascript">
+      $(".rotate").textrotator({
         animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
         separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-        speed: 2000 // How many milliseconds until the next word show.
-    });
-</script>
-
-</body>
+        speed: 2000, // How many milliseconds until the next word show.
+      });
+    </script>
+  </body>
 </html>
