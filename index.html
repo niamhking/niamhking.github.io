@@ -24,6 +24,10 @@
     <link href="assets/flexslider/flexslider.css" rel="stylesheet" />
     <!-- Theme Style -->
     <link href="css/style.css" rel="stylesheet" />
+    <!-- Mobile Fixes -->
+    <link href="css/mobile-fixes.css" rel="stylesheet" />
+    <!-- Final Desktop Alignment Fix -->
+    <link href="css/final-alignment-fix.css" rel="stylesheet" />
     <!-- Animations -->
     <link href="css/animate.css" rel="stylesheet" />
 
@@ -83,42 +87,47 @@ HEADER SECTION
       <!--/container-->
       <!-- Header Image -->
       <section class="hero" id="hero">
-        <div class="container">
-          <!-- Slider Button (don't edit!)-->
-          <div class="row">
+        <div class="hero-container">
+          <!-- Navigation -->
+          <div class="hero-navigation">
             <div class="col-md-12 text-right navicon">
-              <a id="nav-toggle" class="nav_slide_button" href="index.html#"
-                ><span></span
-              ></a>
-            </div>
-          </div>
-          <!-- HEADER HEADLINE -->
-          <div class="row">
-            <div class="col-md-8 col-md-offset-1 inner">
-              <h1 class="animated fadeInDown">
-                N<span style="color: #e04343">I</span>amh<br />
-                <span>K<span style="color: #ffe800">I</span>ng</span>
-              </h1>
-              <!-- Title -->
-              <h3 class="animated fadeInUp delay-05s">
-                <span class="rotate"
-                  >Software Developer, UI/UX Designer, Frontend Developer, Full
-                  Stack Developer, Student, Professional, First Class Graduate,
-                  Web Developer, Engineer
-                </span>
-              </h3>
-              <!-- Text Rotator -->
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-              <a href="index.html#about" class="scrollto fadeInUp delay-5s">
-                <p></p>
-                <p class="scrollto--arrow">
-                  <img src="img/scroll-down.png" alt="scroll down arrow" />
-                </p>
+              <a id="nav-toggle" class="nav_slide_button" href="index.html#">
+                <span></span>
               </a>
             </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="hero-content">
+            <!-- Name -->
+            <h1 class="hero-title animated fadeInDown">
+              N<span class="accent-red">I</span>amh<br />
+              <span class="hero-surname"
+                >K<span class="accent-yellow">I</span>ng</span
+              >
+            </h1>
+
+            <!-- Subtitle with Typewriter -->
+            <h2 class="hero-subtitle animated fadeInUp delay-05s">
+              <span
+                class="typewriter-container"
+                data-words="Software Developer,UI/UX Designer,Frontend Developer,Full Stack Developer,Communicator,First Class Graduate,Web Developer,Engineer"
+                aria-live="polite"
+                aria-label="Rotating professional titles"
+              >
+                <span class="typewriter-text"></span>
+                <span class="typewriter-cursor" aria-hidden="true">|</span>
+              </span>
+            </h2>
+          </div>
+
+          <!-- Scroll Button -->
+          <div class="hero-scroll">
+            <a href="index.html#about" class="scrollto fadeInUp delay-5s">
+              <p class="scrollto--arrow">
+                <img src="img/scroll-down.png" alt="scroll down arrow" />
+              </p>
+            </a>
           </div>
         </div>
       </section>
@@ -338,93 +347,94 @@ HEADER SECTION END
         <figcaption class="imgJourni">Stress Sensor Hardware</figcaption>
       </p>
       <p class="subArrow">UI/UX Skills</p>
+      <div class="bulletList">
+        <p>
+          <li>User Research</li>
+          <li>Market Research</li>
+          <li>
+            <button
+              type="button"
+              class="btn btn-pop"
+              data-toggle="modal"
+              data-target="#myModal3"
+            >
+              Personas
+            </button>
 
-      <p>
-        <li>User Research</li>
-        <li>Market Research</li>
-        <li>
-          <button
-            type="button"
-            class="btn btn-pop"
-            data-toggle="modal"
-            data-target="#myModal3"
-          >
-            Personas
-          </button>
-
-          <div id="myModal3" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <img
-                    src="img/persona.png"
-                    alt="app sequence"
-                    class="img-responsive"
-                  />
-                  <figcaption class="imgJourni">
-                    Persona Designed for University Project
-                  </figcaption>
+            <div id="myModal3" class="modal fade" tabindex="-1" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img
+                      src="img/persona.png"
+                      alt="app sequence"
+                      class="img-responsive"
+                    />
+                    <figcaption class="imgJourni">
+                      Persona Designed for University Project
+                    </figcaption>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="btn btn-pop"
-            data-toggle="modal"
-            data-target="#myModal"
-          >
-            Wireframes
-          </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="btn btn-pop"
+              data-toggle="modal"
+              data-target="#myModal"
+            >
+              Wireframes
+            </button>
 
-          <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <img
-                    src="img/wireframes.png"
-                    alt="app sequence"
-                    class="img-responsive"
-                  />
-                  <figcaption class="imgJourni">
-                    Wireframe Sketches Using Figma
-                  </figcaption>
+            <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img
+                      src="img/wireframes.png"
+                      alt="app sequence"
+                      class="img-responsive"
+                    />
+                    <figcaption class="imgJourni">
+                      Wireframe Sketches Using Figma
+                    </figcaption>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="btn btn-pop"
-            data-toggle="modal"
-            data-target="#myModal2"
-          >
-            Prototypes
-          </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="btn btn-pop"
+              data-toggle="modal"
+              data-target="#myModal2"
+            >
+              Prototypes
+            </button>
 
-          <div id="myModal2" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <img
-                    src="img/prototype.png"
-                    alt="app sequence"
-                    class="img-responsive"
-                  />
-                  <figcaption class="imgJourni">
-                    Protoype UI Design Using Figma
-                  </figcaption>
+            <div id="myModal2" class="modal fade" tabindex="-1" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img
+                      src="img/prototype.png"
+                      alt="app sequence"
+                      class="img-responsive"
+                    />
+                    <figcaption class="imgJourni">
+                      Protoype UI Design Using Figma
+                    </figcaption>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </li>
-        <li>User Testing</li>
-      </p>
+          </li>
+          <li>User Testing</li>
+        </p>
+      </div>
       <!-- <p>
         <img src="img/wireframes.png" alt="app sequence" class="imgFig" />
         <figcaption class="imgJourni">
@@ -719,17 +729,11 @@ CONTACT SECTION END
     <script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
     <!-- Lightbox.js -->
     <script src="assets/lightbox/js/lightbox.min.js"></script>
+    <!-- Modern Typewriter Component -->
+    <script src="js/typewriter.js"></script>
+
     <!-- Theme JavaScript Core -->
     <script src="js/main.js"></script>
     <script src="js/script.js"></script>
-
-    <!-- TEXT ROTATOR SETTINGS -->
-    <script type="text/javascript">
-      $(".rotate").textrotator({
-        animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-        separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-        speed: 2000, // How many milliseconds until the next word show.
-      });
-    </script>
   </body>
 </html>

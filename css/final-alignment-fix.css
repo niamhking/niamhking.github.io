@@ -1,0 +1,91 @@
+/* FINAL FIX: Force Desktop Left Alignment */
+@media screen and (min-width: 576px) {
+  section.hero.hero .hero-content {
+    display: block !important;
+    width: 60% !important;
+    margin: 0 auto !important;
+    text-align: left !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 2rem !important;
+  }
+  
+  /* Add padding to UI/UX Skills section */
+  section.intro.text-center .col-md-8 {
+    padding-left: 3rem !important;
+  }
+  
+  section.hero.hero .hero-title {
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+    font-size: clamp(2rem, 8vw, 6rem) !important;
+    letter-spacing: clamp(-0.1rem, -2vw, -0.5rem) !important;
+    margin: 0 0 0.25rem 0 !important;
+    position: static !important;
+  }
+  
+  section.hero.hero .hero-subtitle {
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+    font-size: clamp(1rem, 3vw, 1.2rem) !important;
+    letter-spacing: 0.3rem !important;
+    margin: 0.25rem 0 0 0 !important;
+    position: static !important;
+  }
+  
+  section.hero.hero .typewriter-container {
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+    position: static !important;
+  }
+  
+  section.hero.hero .typewriter-text {
+    text-align: left !important;
+    display: inline !important;
+    vertical-align: baseline !important;
+  }
+  
+  section.hero.hero .typewriter-container {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: none !important;
+    vertical-align: baseline !important;
+  }
+  
+  section.hero.hero .typewriter-cursor {
+    display: inline-block !important;
+    vertical-align: baseline !important;
+    margin-left: 4px !important;
+    animation: typewriter-cursor-blink 1s infinite !important;
+  }
+}
+
+/* Preserve Mobile Centered Layout */
+@media screen and (max-width: 575px) {
+  section.hero.hero .hero-content {
+    display: flex !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  section.hero.hero .hero-title {
+    text-align: center !important;
+  }
+  
+  section.hero.hero .hero-subtitle {
+    text-align: center !important;
+  }
+  
+  section.hero.hero .typewriter-container {
+    text-align: center !important;
+  }
+  
+  section.hero.hero .typewriter-text {
+    text-align: center !important;
+  }
+}
