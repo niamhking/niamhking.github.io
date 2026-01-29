@@ -262,15 +262,18 @@ const srStyles = `
 
 .typewriter-cursor {
   display: inline-block;
-  animation: typewriter-cursor-blink 1s infinite;
-  font-weight: normal;
-  color: inherit;
-  margin-left: 2px;
+  width: 2px;
+  height: 1.1em;
+  background-color: #e04343;
+  margin-left: 4px;
+  vertical-align: text-bottom;
+  animation: cursor-fade 1s ease-in-out infinite;
+  border-radius: 1px;
 }
 
-@keyframes typewriter-cursor-blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+@keyframes cursor-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
 }
 
 /* Reduced motion support */

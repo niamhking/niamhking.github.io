@@ -299,6 +299,6 @@ var ischrome = /chrome/.test(navigator.userAgent.toLowerCase());
 
 if (ischrome) {
     ssc_addEvent("mousedown", ssc_mousedown);
-    ssc_addEvent("mousewheel", ssc_wheel);
+    ssc_addEvent("mousewheel", ssc_wheel, {passive: false});
     ssc_addEvent("load", ssc_init)
 }
