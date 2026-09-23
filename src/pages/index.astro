@@ -1,0 +1,85 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
+import Background from '../components/Background.astro';
+import Contact from '../components/Contact.astro';
+import Project from '../components/Project.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+
+const projects = await getCollection('projects');
+
+// Category order is the narrative order: paid work first, then the side project,
+// then how I got here. Within a category, `order` descends.
+const groups = [
+  {
+    key: 'commercial' as const,
+    eyebrow: 'Selected work',
+    title: 'Client projects',
+    lead: 'Delivered at Scorchsoft across a range of industries. Clients are not named — the descriptions stay at the level of the engineering.',
+  },
+  {
+    key: 'personal' as const,
+    eyebrow: 'Personal project',
+    title: 'Built in my own time',
+    lead: 'Built for a family-run landscape gardening business — scheduling, job logging and invoicing, all on one phone.',
+  },
+  {
+    key: 'university' as const,
+    eyebrow: 'Earlier',
+    title: 'University projects',
+    lead: 'Where the electronics and computer science halves of my degree met — mostly hardware talking to software.',
+  },
+  {
+    key: 'earlier' as const,
+    eyebrow: 'Archive',
+    title: 'Coursework',
+    lead: undefined,
+  },
+];
+
+const byCategory = groups
+  .map((group) => ({
+    ...group,
+    items: projects
+      .filter((project) => project.data.category === group.key)
+      .sort((a, b) => b.data.order - a.data.order),
+  }))
+  .filter((group) => group.items.length > 0);
+---
+
+<Base>
+  <Hero />
+  <Experience />
+
+  <section id="projects" class="section border-b border-line" aria-labelledby="projects-heading">
+    <div class="shell">
+      <h2 id="projects-heading" class="sr-only">Projects</h2>
+
+      <div class="flex flex-col gap-16 sm:gap-20">
+        {
+          byCategory.map((group) => (
+            <div>
+              <SectionHeading
+                eyebrow={group.eyebrow}
+                title={group.title}
+                lead={group.lead}
+                id={`group-${group.key}`}
+              />
+
+              <div class="mt-10 flex flex-col gap-6 sm:gap-8">
+                {group.items.map((project) => (
+                  <Project project={project} emphasis={project.data.featured} />
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <Background />
+  <Contact />
+</Base>

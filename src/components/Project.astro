@@ -1,0 +1,197 @@
+---
+import { getImage } from 'astro:assets';
+import { render, type CollectionEntry } from 'astro:content';
+import Gallery, { type GalleryImage } from './Gallery.tsx';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+  /** The lead case study gets a heavier treatment. */
+  emphasis?: boolean;
+}
+
+const { project, emphasis = false } = Astro.props;
+const data = project.data;
+const { Content } = await render(project);
+
+/*
+  Images are optimised at build time by Astro's pipeline, then handed to the React
+  island as plain data. The island stays a lightbox — it never becomes responsible
+  for image processing, and no unoptimised original is ever requested.
+*/
+const images: GalleryImage[] = await Promise.all(
+  data.gallery.map(async (item) => {
+    const optimised = await getImage({
+      src: item.src,
+      widths: [320, 640, 960],
+      format: 'webp',
+    });
+    return {
+      src: optimised.src,
+      srcSet: optimised.srcSet.attribute || undefined,
+      width: Number(optimised.attributes.width ?? item.src.width),
+      height: Number(optimised.attributes.height ?? item.src.height),
+      alt: item.alt,
+      caption: item.caption,
+    };
+  })
+);
+
+const headingId = `project-${project.id}`;
+
+/*
+  A wide card with one narrow text column looks broken, so the prose and the
+  "What I did" list sit side by side once there is room for two readable
+  measures — but only when there is genuinely something to put in both columns.
+  With only one of them, a single full-width column is the right answer.
+*/
+const hasBody = project.body !== undefined && project.body.trim().length > 0;
+const hasContributions = data.contributions.length > 0;
+const twoColumn = hasBody && hasContributions;
+---
+
+<article
+  id={project.id}
+  aria-labelledby={headingId}
+  class:list={[
+    'card scroll-mt-24 p-5 sm:p-7 lg:p-9',
+    emphasis && 'border-accent/35 bg-gradient-to-b from-accent-soft/50 to-surface',
+  ]}
+>
+  <header>
+    <div class="flex flex-wrap items-center gap-2">
+      {
+        /*
+          "Featured" only means something where it singles one project out from
+          others alongside it, so it is for client work. The personal project is
+          alone in its section and already carries its own label.
+        */
+        emphasis && data.category !== 'personal' && (
+          <span class="tag border-accent/40 bg-accent-soft font-semibold text-accent">
+            Featured
+          </span>
+        )
+      }
+      {data.period && <span class="tag font-mono">{data.period}</span>}
+      {
+        data.category === 'personal' && (
+          <span class="tag border-accent/40 bg-accent-soft font-semibold text-accent">
+            Personal project
+          </span>
+        )
+      }
+    </div>
+
+    <h3
+      id={headingId}
+      class:list={[
+        'mt-3 leading-tight',
+        emphasis ? 'text-[length:var(--text-h2)]' : 'text-[length:var(--text-h3)]',
+      ]}
+    >
+      {data.title}
+    </h3>
+
+    {data.role && <p class="mt-1.5 text-sm text-faint">{data.role}</p>}
+
+    <p class="prose-body mt-4">{data.summary}</p>
+  </header>
+
+  {
+    data.metrics.length > 0 && (
+      // Flex-wrap rather than a fixed grid: an odd number of metrics fills the
+      // last row instead of leaving a visible empty cell on narrow screens.
+      <dl class="mt-6 flex flex-wrap gap-2">
+        {data.metrics.map((metric) => (
+          <div class="min-w-[8.5rem] flex-1 rounded-xl border border-line bg-surface px-4 py-3.5">
+            <dt class="text-xs leading-snug text-faint">{metric.label}</dt>
+            <dd class="mt-0.5 font-display text-xl font-semibold tracking-tight text-ink">
+              {metric.value}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    )
+  }
+
+  <div
+    class:list={[
+      'mt-7 gap-x-12 gap-y-7 xl:gap-x-16',
+      twoColumn ? 'grid lg:grid-cols-2' : 'flex flex-col',
+    ]}
+  >
+    {/* The Markdown body. Styled here rather than with a plugin so the type scale
+        stays the same one the rest of the page uses. */}
+    {
+      hasBody && (
+        <div
+          class:list={[
+            'text-[0.975rem] leading-relaxed text-muted [&>p+p]:mt-4 [&_strong]:font-semibold [&_strong]:text-ink',
+          ]}
+        >
+          <Content />
+        </div>
+      )
+    }
+
+    {
+      hasContributions && (
+        <section aria-label={`What I did on ${data.title}`}>
+          <h4 class="eyebrow mb-3 font-sans">What I did</h4>
+          <ul class="flex flex-col gap-2.5">
+            {data.contributions.map((point) => (
+              <li
+                class="relative pl-5 text-[0.925rem] leading-relaxed text-muted"
+              >
+                <span
+                  aria-hidden="true"
+                  class="absolute top-[0.6em] left-0 h-1.5 w-1.5 rounded-full bg-accent"
+                />
+                {point}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </div>
+
+  {
+    images.length > 0 && (
+      <section class="mt-8" aria-label={`Screens from ${data.title}`}>
+        {/*
+          client:visible — the lightbox is never needed above the fold, so its
+          bundle is not fetched until the gallery scrolls into view.
+        */}
+        <Gallery
+          client:visible
+          images={images}
+          device={data.galleryDevice}
+          label={`Screens from ${data.title}`}
+        />
+      </section>
+    )
+  }
+
+  <section class="mt-7" aria-label={`Technologies used on ${data.title}`}>
+    <h4 class="eyebrow mb-3 font-sans">Built with</h4>
+    <ul class="flex flex-wrap gap-1.5">
+      {data.stack.map((tech) => <li class="tag">{tech}</li>)}
+    </ul>
+  </section>
+
+  {
+    data.links.length > 0 && (
+      <nav class="mt-7 flex flex-wrap gap-3" aria-label={`Links for ${data.title}`}>
+        {data.links.map((link) => (
+          <a
+            href={link.href}
+            rel="noopener"
+            class="inline-flex min-h-10 items-center rounded-lg border border-line-strong px-4 text-sm font-medium text-ink transition-colors hover:bg-sunken"
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+    )
+  }
+</article>

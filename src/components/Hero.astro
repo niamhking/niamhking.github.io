@@ -1,0 +1,86 @@
+---
+import { Image } from 'astro:assets';
+import portrait from '../assets/portrait.png';
+import { site } from '../data/site';
+---
+
+<section id="top" class="relative overflow-hidden border-b border-line">
+  {/* Decorative wash. aria-hidden and pointer-events-none so it is invisible to
+      assistive tech and never intercepts a click. */}
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60rem_40rem_at_85%_-10%,var(--c-accent-soft),transparent_70%)]"
+  >
+  </div>
+
+  <div class="shell grid items-center gap-10 py-16 sm:py-20 md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] md:gap-14 lg:py-28">
+    <div>
+      <p class="eyebrow mb-5">
+        {site.role} · {site.location}
+      </p>
+
+      <h1 class="text-[length:var(--text-display)] leading-[0.95] tracking-[-0.035em]">
+        Niamh King
+      </h1>
+
+      <p class="prose-body mt-6 max-w-2xl">
+        I build production web and mobile software at <strong class="font-semibold text-ink"
+          >{site.employer}</strong
+        >, a UK software development and AI company, working remotely. Every project picks its own
+        stack, so mine is a mixed one — Laravel and NestJS on the back end, React and React Native
+        on the front, mostly TypeScript, mostly on AWS.
+      </p>
+
+      <p class="prose-body mt-4 max-w-2xl">
+        I own features end to end — shaped and estimated before anyone writes code, built and
+        tested, documented, then checked again once it is live. I handle the client side of that
+        too: leading the technical conversations and following them up in writing, so people know
+        where things stand without having to chase me.
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a
+          href="#work"
+          class="inline-flex min-h-11 items-center rounded-xl bg-accent px-5 text-sm font-semibold text-accent-ink transition-colors hover:bg-accent-hover"
+        >
+          See the work
+        </a>
+        <a
+          href={site.links.linkedin}
+          rel="noopener"
+          class="inline-flex min-h-11 items-center rounded-xl border border-line-strong px-5 text-sm font-semibold text-ink transition-colors hover:bg-sunken"
+        >
+          LinkedIn
+        </a>
+        <a
+          href={site.links.github}
+          rel="noopener"
+          class="inline-flex min-h-11 items-center rounded-xl border border-line-strong px-5 text-sm font-semibold text-ink transition-colors hover:bg-sunken"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+
+    {/* Photo is decorative-adjacent but does carry meaning (it is a portfolio),
+        so it keeps a real alt. Explicit dimensions prevent layout shift. */}
+    <div class="order-first mx-auto w-40 sm:w-52 md:order-none md:w-full md:max-w-xs">
+      <div class="relative">
+        <div
+          aria-hidden="true"
+          class="absolute -inset-3 -z-10 rounded-[2rem] border border-line bg-sunken/60"
+        >
+        </div>
+        <Image
+          src={portrait}
+          alt="Niamh King"
+          widths={[200, 320, 440]}
+          sizes="(min-width: 768px) 20rem, 10rem"
+          class="w-full rounded-[1.6rem] object-cover"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </div>
+</section>

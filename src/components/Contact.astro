@@ -1,0 +1,38 @@
+---
+import { site } from '../data/site';
+import SectionHeading from './SectionHeading.astro';
+
+const channels = [
+  { label: 'Email', value: site.email, href: `mailto:${site.email}` },
+  { label: 'LinkedIn', value: 'in/niamh-king', href: site.links.linkedin },
+  { label: 'GitHub', value: '@niamhking', href: site.links.github },
+];
+---
+
+<section id="contact" class="section" aria-labelledby="contact-heading">
+  <div class="shell">
+    <SectionHeading
+      id="contact-heading"
+      eyebrow="Contact"
+      title="Get in touch"
+      lead="Happy to talk about engineering work, or about anything on this page."
+    />
+
+    <ul class="mt-10 grid gap-4 sm:grid-cols-3">
+      {
+        channels.map((channel) => (
+          <li>
+            <a
+              href={channel.href}
+              rel="noopener"
+              class="card flex h-full flex-col justify-between gap-4 p-5 transition-colors hover:border-accent/50 hover:bg-accent-soft/40"
+            >
+              <span class="eyebrow">{channel.label}</span>
+              <span class="text-base font-medium break-words text-ink">{channel.value}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
