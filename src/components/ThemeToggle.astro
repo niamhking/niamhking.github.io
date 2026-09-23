@@ -1,0 +1,61 @@
+---
+// Three-state is overkill here: the page follows the system until someone
+// overrides it, and the override persists. aria-pressed announces the state.
+---
+
+<button
+  id="theme-toggle"
+  type="button"
+  class="flex h-10 w-10 items-center justify-center rounded-lg border border-line text-ink transition-colors hover:bg-sunken"
+  aria-label="Switch to dark theme"
+  aria-pressed="false"
+>
+  <svg
+    class="h-[1.15rem] w-[1.15rem] dark:hidden"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.7"
+    stroke-linecap="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+  </svg>
+  <svg
+    class="hidden h-[1.15rem] w-[1.15rem] dark:block"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
+  </svg>
+</button>
+
+<script>
+  const button = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+
+  const sync = () => {
+    const isDark = root.dataset.theme === 'dark';
+    button?.setAttribute('aria-pressed', String(isDark));
+    button?.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+  };
+
+  button?.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem('theme', next);
+    } catch {
+      /* Storage unavailable — the choice just will not persist. */
+    }
+    sync();
+  });
+
+  sync();
+</script>

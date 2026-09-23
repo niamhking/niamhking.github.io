@@ -1,0 +1,21 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  id?: string;
+  lead?: string;
+}
+const { eyebrow, title, id, lead } = Astro.props;
+
+/*
+  Single column, full container width. The lead is deliberately uncapped so it
+  uses the space rather than sitting in a narrow measure — `.shell` still stops
+  it at 78rem, so it never runs away on a very wide monitor.
+*/
+---
+
+<div>
+  {eyebrow && <p class="eyebrow mb-3">{eyebrow}</p>}
+  <h2 id={id} class="text-[length:var(--text-h2)] leading-[1.12]">{title}</h2>
+  {lead && <p class="prose-body mt-4">{lead}</p>}
+</div>

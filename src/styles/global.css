@@ -1,0 +1,227 @@
+@import 'tailwindcss';
+
+/* Self-hosted variable fonts — no third-party request on the critical path. */
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/fraunces';
+
+/*
+  Theme is driven by a single set of semantic tokens. Light values live on :root,
+  dark values override them, and Tailwind maps its colour utilities onto those
+  variables via `@theme inline` — so `bg-surface` is correct in both themes with
+  no `dark:` duplication at the call site.
+*/
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+:root {
+  color-scheme: light;
+
+  --c-canvas: #fbfaf7;
+  --c-surface: #ffffff;
+  --c-surface-sunken: #f4f2ec;
+  --c-ink: #1a1a17;
+  --c-ink-muted: #5c5f59;
+  --c-ink-faint: #8a8d85;
+  --c-line: #e5e2d9;
+  --c-line-strong: #d3cfc2;
+  --c-accent: #2d5d4b;
+  --c-accent-hover: #24493b;
+  --c-accent-soft: #e6efe9;
+  --c-accent-ink: #ffffff;
+  --c-ember: #a84f28;
+  --c-selection: #cfe2d6;
+  --shadow-card: 0 1px 2px rgb(26 26 23 / 0.04), 0 8px 24px -12px rgb(26 26 23 / 0.12);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --c-canvas: #121311;
+  --c-surface: #1a1c18;
+  --c-surface-sunken: #202220;
+  --c-ink: #eceae2;
+  --c-ink-muted: #a2a59c;
+  --c-ink-faint: #7c8077;
+  --c-line: #2c2f2a;
+  --c-line-strong: #3c403a;
+  --c-accent: #8cc7a4;
+  --c-accent-hover: #a5d6b8;
+  --c-accent-soft: #1e2a23;
+  --c-accent-ink: #10221a;
+  --c-ember: #e0885f;
+  --c-selection: #2b4235;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px -12px rgb(0 0 0 / 0.6);
+}
+
+@theme inline {
+  --color-canvas: var(--c-canvas);
+  --color-surface: var(--c-surface);
+  --color-sunken: var(--c-surface-sunken);
+  --color-ink: var(--c-ink);
+  --color-muted: var(--c-ink-muted);
+  --color-faint: var(--c-ink-faint);
+  --color-line: var(--c-line);
+  --color-line-strong: var(--c-line-strong);
+  --color-accent: var(--c-accent);
+  --color-accent-hover: var(--c-accent-hover);
+  --color-accent-soft: var(--c-accent-soft);
+  --color-accent-ink: var(--c-accent-ink);
+  --color-ember: var(--c-ember);
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Fraunces Variable', ui-serif, Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, monospace;
+
+  --shadow-card: var(--shadow-card);
+
+  /* Fluid type scale — every step interpolates between 360px and 1280px viewports,
+     so nothing needs a breakpoint just to stop being too big on a phone. */
+  --text-display: clamp(2.75rem, 1.4rem + 6vw, 6rem);
+  --text-h1: clamp(2rem, 1.2rem + 3.6vw, 3.5rem);
+  --text-h2: clamp(1.5rem, 1.1rem + 1.8vw, 2.25rem);
+  --text-h3: clamp(1.175rem, 1.02rem + 0.7vw, 1.5rem);
+  --text-lead: clamp(1.05rem, 0.97rem + 0.42vw, 1.3rem);
+}
+
+@layer base {
+  * {
+    min-width: 0; /* stop flex/grid children forcing horizontal overflow */
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Offset anchor targets so the sticky header never covers a heading. */
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--c-canvas);
+    color: var(--c-ink);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip; /* belt and braces against a stray wide child */
+  }
+
+  ::selection {
+    background-color: var(--c-selection);
+    color: var(--c-ink);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-variation-settings: 'SOFT' 0, 'WONK' 0, 'opsz' 40;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* One consistent, always-visible focus ring. Keyboard users can always see
+     where they are; mouse users never see it. */
+  :focus-visible {
+    outline: 2px solid var(--c-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Images never overflow their column, and never cause layout shift. */
+  img,
+  svg,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Single source of truth for horizontal rhythm: a 20px gutter on phones
+     opening out to a capped measure on large screens. */
+  .shell {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 78rem;
+    padding-inline: clamp(1.25rem, 4vw, 3rem);
+  }
+
+  .shell-narrow {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 48rem;
+    padding-inline: clamp(1.25rem, 4vw, 3rem);
+  }
+
+  .section {
+    padding-block: clamp(3.5rem, 8vw, 7rem);
+  }
+
+  .prose-body {
+    color: var(--c-ink-muted);
+    font-size: var(--text-lead);
+    line-height: 1.65;
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-ink-faint);
+  }
+
+  .card {
+    background-color: var(--c-surface);
+    border: 1px solid var(--c-line);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-card);
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid var(--c-line);
+    background-color: var(--c-surface-sunken);
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: var(--c-ink-muted);
+    white-space: nowrap;
+  }
+
+  /* Hit targets are never smaller than 44px on touch pointers. */
+  @media (pointer: coarse) {
+    a[data-nav],
+    button {
+      min-height: 44px;
+    }
+  }
+}
+
+/* Astro view transitions: a quiet cross-fade, disabled under reduced motion
+   by the rule above. */
+@view-transition {
+  navigation: auto;
+}

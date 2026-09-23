@@ -1,0 +1,7 @@
+# Build output lives in docs/ and IS committed — GitHub Pages serves it.
+node_modules/
+.astro/
+.DS_Store
+*.log
+.env
+.env.production
